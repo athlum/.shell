@@ -169,7 +169,7 @@ tmux_conf_theme_status_left_attr='bold,none,none'
 # status right style
 tmux_conf_theme_status_right_fg='#8a8a8a,#000000,#000000' # light gray, white, black
 tmux_conf_theme_status_right_bg='#080808,#00afff,#e4e4e4' # dark gray, red, white
-tmux_conf_theme_status_right_attr='none,none,bold'
+tmux_conf_theme_status_right_attr='none,blod,bold'
 
 # pairing indicator
 tmux_conf_theme_pairing='👓 '          # U+1F453

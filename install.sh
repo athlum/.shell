@@ -24,9 +24,8 @@ brew install tmux
 #install vim8
 brew install vim --with-override-system-vi
 
-ln -sf ~/.shell/.tmux.conf ~/.tmux.conf
-ln -sf ~/.shell/.tmux.conf.local ~/.tmux.conf.local
-ln -sf ~/.shell/.vimrc ~/.vimrc
+#link conf
+./linkconf.sh
 
 #install vim theme
 cd /tmp

@@ -23,6 +23,7 @@ brew install tmux
 
 #install vim8
 brew install vim --with-cscope --with-python --with-lua --with-override-system-vi
+brew install ctags-exuberant
 
 #link conf
 ./linkconf.sh
@@ -36,3 +37,4 @@ rm -rf vim-colors-solarized
 #install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+~/.vim/bundle/nerd-fonts/install.sh

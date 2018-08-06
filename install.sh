@@ -14,6 +14,26 @@ env git clone --depth=1 https://github.com/athlum/.shell.git $SHELLPATH || {
     exit 1
 }
 
+#install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#install tmux
+brew install tmux
+./powerline.sh
+
+#install vim8
+brew install vim --with-override-system-vi
+
 ln -sf ~/.shell/.tmux.conf ~/.tmux.conf
 ln -sf ~/.shell/.tmux.conf.local ~/.tmux.conf.local
 ln -sf ~/.shell/.vimrc ~/.vimrc
+
+#install vim theme
+cd /tmp
+git clone https://github.com/altercation/vim-colors-solarized.git
+mv vim-colors-solarized/colors ~/.vim/
+rm -rf vim-colors-solarized
+
+#install vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall

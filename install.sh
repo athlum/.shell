@@ -22,7 +22,7 @@ brew install tmux
 ./powerline.sh
 
 #install vim8
-brew install vim --with-override-system-vi
+brew install vim --with-cscope --with-python --with-lua --override-system-vim
 
 #link conf
 ./linkconf.sh

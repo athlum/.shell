@@ -35,6 +35,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
+
 Plugin 'Shougo/neocomplete.vim'
 
 Plugin 'Shougo/neosnippet'

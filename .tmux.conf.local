@@ -279,6 +279,8 @@ set -g mode-keys vi
 # toggle mouse
 bind m run "cut -c3- ~/.tmux.conf | sh -s _toggle_mouse"
 
+set-option -g default-shell /bin/zsh
+
 set -g history-limit 10000
 set -g prefix `
 bind ` send-prefix

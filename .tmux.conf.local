@@ -276,7 +276,9 @@ set -g mode-keys vi
 # ------------------------------------------------------------------------------
 # this is the place to further customize tmux's configuration
 
-#set -g history-limit 10000
+# toggle mouse
+bind m run "cut -c3- ~/.tmux.conf | sh -s _toggle_mouse"
+
 set -g history-limit 10000
 set -g prefix `
 bind ` send-prefix

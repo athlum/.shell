@@ -90,7 +90,7 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-autocmd BufWritePost *go silent !go build -i
+autocmd BufWritePost *.go silent exec "!echo $(go build -i 2>&1) >/dev/null"
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)

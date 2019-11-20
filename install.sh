@@ -14,7 +14,7 @@ env git clone --depth=1 https://github.com/athlum/.shell.git $SHELLPATH || {
     exit 1
 }
 
-cd .shell
+cd $SHELLPATH
 
 #install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

@@ -42,3 +42,5 @@ vim +PluginInstall +qall
 ~/.vim/bundle/nerd-fonts/install.sh
 
 # ./chunkwm.sh
+
+./nvim.sh

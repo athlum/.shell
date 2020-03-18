@@ -35,13 +35,15 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'SirVer/ultisnips'
+
 " Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
 
-Plugin 'Shougo/neocomplete.vim'
+" Plugin 'Shougo/neocomplete.vim'
 
-Plugin 'Shougo/neosnippet'
+" Plugin 'Shougo/neosnippet'
 
-Plugin 'Shougo/neosnippet-snippets'
+" Plugin 'Shougo/neosnippet-snippets'
 
 Plugin 'vim-airline/vim-airline'
 
@@ -71,18 +73,6 @@ Plugin 'ryanoasis/nerd-fonts'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"neocomplete.vim -----------------------------
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#disable_auto_complete = 1
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-       \ <SID>check_back_space() ? "\<TAB>" :
-       \ neocomplete#start_manual_complete()
-function! s:check_back_space() "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-
 "Vim-go --------------------------------------
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -90,7 +80,8 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-autocmd BufWritePost *.go silent exec "!echo $(go build -i 2>&1) >/dev/null"
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)

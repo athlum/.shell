@@ -39,8 +39,6 @@ Plugin 'SirVer/ultisnips'
 
 " Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
 
-" Plugin 'Shougo/neocomplete.vim'
-
 " Plugin 'Shougo/neosnippet'
 
 " Plugin 'Shougo/neosnippet-snippets'
@@ -87,6 +85,15 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>gd <Plug>(go-doc))
+au FileType go imap <tab> <C-X><C-O>
+
+"deoplete.nvim-------------------------------
+let g:deoplete#enable_at_startup = 1
+
+"ultisnips ----------------------------------
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "vim-airline --------------------------------
 set laststatus=2

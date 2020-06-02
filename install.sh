@@ -1,5 +1,8 @@
 # /bin/sh
 
+#link conf
+./linkconf.sh
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/athlum/oh-my-zsh/master/tools/install.sh)"
 
 
@@ -26,9 +29,6 @@ brew install tmux
 #install vim8
 brew install vim --with-cscope --with-python --with-lua --with-override-system-vi
 brew install ctags-exuberant
-
-#link conf
-./linkconf.sh
 
 #install vim theme
 cd /tmp

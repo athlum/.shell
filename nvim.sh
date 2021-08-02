@@ -2,7 +2,7 @@
 
 brew install neovim
 
-pip install pynvim
+pip3 install pynvim
 
 mkdir -p ~/.config/nvim
 

@@ -29,6 +29,11 @@ brew install tmux
 brew install vim --with-cscope --with-python --with-lua --with-override-system-vi
 brew install ctags-exuberant
 
+#install python3
+brew install python3
+python -m ensurepip --upgrade
+python3 -m ensurepip --upgrade
+
 #install vim theme
 cd /tmp
 git clone https://github.com/altercation/vim-colors-solarized.git

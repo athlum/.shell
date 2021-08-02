@@ -1,8 +1,5 @@
 # /bin/sh
 
-#link conf
-./linkconf.sh
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/athlum/oh-my-zsh/master/tools/install.sh)"
 
 
@@ -16,6 +13,9 @@ env git clone --depth=1 https://github.com/athlum/.shell.git $SHELLPATH || {
     printf "Error: git clone of .shell repo failed\n"
     exit 1
 }
+
+#link conf
+./linkconf.sh
 
 cd $SHELLPATH
 

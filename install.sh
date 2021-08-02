@@ -11,12 +11,12 @@ env git clone --depth=1 https://github.com/athlum/.shell.git $SHELLPATH || {
     exit 1
 }
 
+cd $SHELLPATH
+
 #link conf
 ./linkconf.sh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/athlum/oh-my-zsh/master/tools/install.sh)"
-
-cd $SHELLPATH
 
 #install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

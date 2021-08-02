@@ -1,8 +1,5 @@
 # /bin/sh
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/athlum/oh-my-zsh/master/tools/install.sh)"
-
-
 SHELLPATH=~/.shell
 if [ -d "$SHELLPATH" ]; then
     printf "${YELLOW}We have .shell repo already."
@@ -16,6 +13,8 @@ env git clone --depth=1 https://github.com/athlum/.shell.git $SHELLPATH || {
 
 #link conf
 ./linkconf.sh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/athlum/oh-my-zsh/master/tools/install.sh)"
 
 cd $SHELLPATH
 
